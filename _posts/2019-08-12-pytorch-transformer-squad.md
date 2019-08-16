@@ -2,6 +2,7 @@
 layout: post
 title:  "Machine Comprehension with pytorch-transformers"
 date:   2019-08-12 12:52:41 -0300
+comments: true 
 image:
   path: /images/transformer.jpg
 categories: machine_learning nlp pytorch
