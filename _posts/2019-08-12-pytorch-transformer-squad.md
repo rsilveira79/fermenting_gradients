@@ -12,7 +12,9 @@ categories: machine_learning nlp pytorch
 I being using question and answering system at work and also for some personal POCs, and I'm really impressed how these algorithms evolved recently. My first interaction with QA algorithms was with the BIDAF model (Bidirectional Attention Flow) [1](#Bidaf) from the great [AllenNLP](https://allennlp.org/) team. It was back in 2017, and [ELMo](https://allennlp.org/elmo) was not even used in this BIDAF model (I believe they were using GLove vectors in this first model). Since then, a lot of stuff is happen in NLP arena, such as ELMo, the [Transformer](https://arxiv.org/abs/1706.03762), [BERT](https://arxiv.org/abs/1810.04805),  what is this happening
 
 
-$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$
+$$
+Attention(Q,K,V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}})V$
+$
 
 ## Finetuning XLNet
 
@@ -117,3 +119,5 @@ from pytorch_transformers import *
 
 ## References
 [1] #Bidaf [Bidirectional Attention Flow for Machine Comprehension](https://arxiv.org/abs/1611.01603)
+[2] [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/) 
+[3] [Stanford CS224n NLP Class w/Ashish Vaswani & Anna Huang](https://www.youtube.com/watch?v=5vcj8kSwBCY&t=76s)
