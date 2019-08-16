@@ -18,7 +18,7 @@ $$
 
 ## Finetuning XLNet
 
-```
+```python
  python run_squad.py \
   --model_type bert \
   --model_name_or_path bert-base-cased \
@@ -40,7 +40,7 @@ $$
 ```
 
 ## Finetuning BERT
-```
+```python
  python run_squad.py \
   --model_type xlnet \
   --model_name_or_path xlnet-large-cased \
