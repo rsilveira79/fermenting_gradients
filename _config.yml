@@ -32,7 +32,7 @@ google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 
 ## Comments
 disqus:
-  shortname: disqus_m6fLEiI8Qn
+    shortname: my_disqus_shortname
 
 ## Twitter
 twitter:
