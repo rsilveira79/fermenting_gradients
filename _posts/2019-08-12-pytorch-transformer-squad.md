@@ -1,5 +1,4 @@
 ---
----
 layout: post
 title:  "Machine Comprehension with pytorch-transformers"
 date:   2019-08-12 12:52:41 -0300
@@ -9,6 +8,12 @@ categories: machine_learning nlp pytorch
 # Step by step finetuning and configuration question and answering with pytorch-transformers
 
 I being using question and answering system at work and also for some personal POCs, and I'm really impressed how these algorithms evolved recently. My first interaction with QA algorithms was with the BIDAF model (Bidirectional Attention Flow) [1](#Bidaf) from the great [AllenNLP](https://allennlp.org/) team. It was back in 2017, and [ELMo](https://allennlp.org/elmo) was not even used in this BIDAF model (I believe they were using GLove vectors in this first model). Since then, a lot of stuff is happen in NLP arena, such as ELMo, the [Transformer](https://arxiv.org/abs/1706.03762), [BERT](https://arxiv.org/abs/1810.04805),  what is this happening
+
+
+```
+Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block rendering: 
+\\[ \frac{1}{n^{2}} \\]
+```
 
 ## Finetuning XLNet
 
