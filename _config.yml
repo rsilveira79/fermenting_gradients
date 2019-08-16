@@ -1,5 +1,5 @@
 ## ENV VARIABLES
-#JEKYLL_ENV=production
+JEKYLL_ENV=production
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -32,7 +32,7 @@ google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 
 ## Comments
 disqus:
-  shortname: @disqus_m6fLEiI8Qn
+  shortname: disqus_m6fLEiI8Qn
 
 ## Twitter
 twitter:
