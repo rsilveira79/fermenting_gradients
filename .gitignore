@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+_asset_bundler_cache
+_site
+.bundle
+.DS_Store
+.jekyll-metadata
+.sass-cache
+*.gem
+>>>>>>> origin/master
 *.sublime-project
 *.sublime-workspace
 .DS_Store
@@ -7,3 +17,7 @@ _site
 codekit-config.json
 Gemfile.lock
 node_modules
+<<<<<<< HEAD
+=======
+npm-debug.log*
+>>>>>>> origin/master
