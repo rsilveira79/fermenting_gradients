@@ -16,6 +16,8 @@ $$
 Attention(Q,K,V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}}})V
 $$
 
+> Attention is all you need!
+
 ## Finetuning XLNet
 
 ```python
