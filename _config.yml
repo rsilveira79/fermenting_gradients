@@ -16,7 +16,7 @@ github_username:  rsilveira79
 
 baseurl: # the subpath of your site, e.g. "/blog"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: /images/site_logo.png # path of site logo, e.g. "/images/.png"
+logo: "/images/site_logo.png" # path of site logo, e.g. "/images/.png"
 date_format: "%B %-d, %Y"
 
 read_time: true
