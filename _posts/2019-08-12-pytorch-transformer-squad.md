@@ -13,8 +13,8 @@ I being using question and answering system at work and also for some personal P
 
 
 $$
-Attention(Q,K,V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}})V$
-$
+Attention(Q,K,V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}}})V
+$$
 
 ## Finetuning XLNet
 
@@ -118,6 +118,6 @@ from pytorch_transformers import *
 
 
 ## References
-[1] #Bidaf [Bidirectional Attention Flow for Machine Comprehension](https://arxiv.org/abs/1611.01603)
-[2] [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/) 
-[3] [Stanford CS224n NLP Class w/Ashish Vaswani & Anna Huang](https://www.youtube.com/watch?v=5vcj8kSwBCY&t=76s)
+[1] #Bidaf [Bidirectional Attention Flow for Machine Comprehension](https://arxiv.org/abs/1611.01603)  
+[2] [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/)   
+[3] [Stanford CS224n NLP Class w/Ashish Vaswani & Anna Huang](https://www.youtube.com/watch?v=5vcj8kSwBCY&t=76s)  
