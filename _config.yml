@@ -15,7 +15,6 @@
 # in the templates via {{ site.myvariable }}.
 #theme: jekyll-theme-so-simple
 remote_theme: "mmistakes/so-simple-theme"
-# remote_theme: mmistakes/so-simple-theme
 locale: en-US
 title: "Fermenting Gradients"
 description: "A blog about machine learning and fermented foods."
@@ -24,7 +23,7 @@ github_username:  rsilveira79
 
 baseurl: # the subpath of your site, e.g. "/blog"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: # path of site logo, e.g. "/images/logo.png"
+logo: "/images/betao-4X.png" # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
 
 read_time: true
@@ -95,7 +94,7 @@ defaults:
 # Site Author
 author:
   name:     Roberto Silveira
-  picture:  /images/betao-4X.png	
+  picture:  "/images/betao-4X.png"	
   email:    rsilveira79@gmail.com
   twitter:  rsilveira79
   links:
