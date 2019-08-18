@@ -8,9 +8,9 @@ image:
 categories: machine_learning nlp pytorch
 ---
 
-# Step by step finetuning and configuration question and answering with pytorch-transformers
+# Step-by-step guide to finetune and use question and answering models with pytorch-transformers
 
-I being using question and answering system at work and also for some personal POCs, and I'm really impressed how these algorithms evolved recently. My first interaction with QA algorithms was with the BIDAF model (Bidirectional Attention Flow) [1](#Bidaf) from the great [AllenNLP](https://allennlp.org/) team. It was back in 2017, and [ELMo](https://allennlp.org/elmo) was not even used in this BIDAF model (I believe they were using GLove vectors in this first model). Since then, a lot of stuff is happen in NLP arena, such as ELMo, the [Transformer](https://arxiv.org/abs/1706.03762), [BERT](https://arxiv.org/abs/1810.04805),  what is this happening
+I being using question and answering system at work and also for some personal POCs, and I'm really impressed how these algorithms evolved recently. My first interaction with QA algorithms was with the BIDAF model (Bidirectional Attention Flow) <sup><a name="bidaf"> [1]</a></sup> from the great [AllenNLP](https://allennlp.org/) team. It was back in 2017, and [ELMo](https://allennlp.org/elmo) was not even used in this BIDAF model (I believe they were using GLove vectors in this first model). Since then, a lot of stuff is happen in NLP arena, such as ELMo, the [Transformer](https://arxiv.org/abs/1706.03762), [BERT](https://arxiv.org/abs/1810.04805),  what is this happening
 
 
 $$
@@ -121,6 +121,19 @@ from pytorch_transformers import *
 
 
 ## References
+
+1. Bidirectional Attention Flow for Machine Comprehension [PDF](https://arxiv.org/abs/1611.01603)[](bidaf)
+2. 
+
+
+## To Probe Further
+
+
 [1] #Bidaf [Bidirectional Attention Flow for Machine Comprehension](https://arxiv.org/abs/1611.01603)  
 [2] [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/)   
 [3] [Stanford CS224n NLP Class w/Ashish Vaswani & Anna Huang](https://www.youtube.com/watch?v=5vcj8kSwBCY&t=76s)  
+
+
+Example
+Deep Gaussian Processes  [PDF]
+Damianou, A. and Lawrence, N., 2013. Proceedings of the Sixteenth International Conference on Artificial Intelligence and Statistics, Vol 31, pp. 207--215. PMLR.
