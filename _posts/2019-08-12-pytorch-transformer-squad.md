@@ -10,25 +10,24 @@ categories: machine_learning nlp pytorch
 
 # Step-by-step guide to finetune and use question and answering models with pytorch-transformers
 
-I being using question and answering system at work and also for some personal POCs, and I'm really impressed how these algorithms evolved recently. My first interaction with QA algorithms was with the BIDAF model (Bidirectional Attention Flow) <sup> [1](#bidaf)</sup> from the great [AllenNLP](https://allennlp.org/) team. It was back in 2017, and ELMo <sup> [2](#elmo)</sup> was not even used in this BiDAF model (I believe they were using GLove vectors in this first model). Since then, a lot of stuff is happen in NLP arena, the Transformer <sup> [3](#transformer)</sup>, BERT <sup> [4](#bert)</sup> and the many other members of the Sesame Street family (now it looks like there is RoBERTa <sup> [4](#roberta)</sup>, VilBERT and maybe (why not?) DilBERT).
+I have used question and answering system at work and also for some personal POCs, and I'm really impressed how these algorithms evolved recently. My first interaction with QA algorithms was with the BiDAF model (Bidirectional Attention Flow) <sup> [1](#bidaf)</sup> from the great [AllenNLP](https://allennlp.org/) team. It was back in 2017, and ELMo embeddings <sup> [2](#elmo)</sup> were not even used in this BiDAF model (I believe they were using GLove vectors in this first model). Since then, a lot of stuff is happened in the NLP arena, such as the Transformer <sup> [3](#transformer)</sup>, BERT <sup> [4](#bert)</sup> and the many other members of the Sesame Street family (now there are a whole BERT-like-family such as Facebook RoBERTa <sup> [4](#roberta)</sup>, VilBERT and maybe(why not?) one day, DilBERT).
 
-There are lots for great material information out there (see [Probe Further](#more) section for more details), so it will be much easier to go and watch these awesome video materials.
+There are lots of great materias out there (see [Probe Further](#more) section for more details), so it will be much easier to go on and watch these awesome video materials instead of detailing each model in a blog post.
 
-What I will really want to spend time in this post is in the practical usage of question and answering models, as they can be very handful for real-life applications (despite same challenges that we will address later on).
+I would really want to spend time in the practical usage of question and answering models, as they can be very helpful for real-life applications (besides some challenges that will be addressed in other posts - such as model size, response time, model quantization/pruning, etc).
 
-In this regard, all the community should really give a massive shout-out to [Hugging Face](http://huggingface.co) team. They are really pushing the limits to make the latest and greatest algorithms available for the broader community, and it is really cool to see how their project is growing rapidly in github (at the time I'm writing this they already surpassed more then 10k :star: on github for the [pytorch-transformer](https://github.com/huggingface/pytorch-transformers) repo, for example).  I will focus on [SQuAD 1.1](https://rajpurkar.github.io/SQuAD-explorer/explore/1.1/dev/) dataset, more details on how fine-tune/use these models with SQuAD 2.0 dataset will be described in further posts.
+In this regard, all the ML community should give a massive shout-out to [Hugging Face](http://huggingface.co) team. They are really pushing the limits to make the latest and greatest algorithms available for the broader community, and it is really cool to see how their project is growing rapidly in github (at the time I'm writing this they already surpassed more than 10k :star: on github for the [pytorch-transformer](https://github.com/huggingface/pytorch-transformers) repo, for example).  I will focus on [SQuAD 1.1](https://rajpurkar.github.io/SQuAD-explorer/explore/1.1/dev/) dataset, more details on how fine-tune/use these models with SQuAD 2.0 dataset will be described in further posts.
 
 ## Inside pytorch-transformers
 The `pytorch-transformers` lib has some special classes, and the nice thing is that they try to be consistent with this architecture independently of the model (BERT, XLNet, RoBERTa, etc). These 3 important classes are:  
 
->  **Config** $$\rightarrow$$ this is the class that defines all the configurations of the model in hand, such as number of hidden layers in Transformer, number of attention heads in the Transformer encoder, activation function, dropout rate, etc. Usually, there are 2 _default_ configurations [`base`, `large`], but it is possible to tune the configurations to have other parameter set. The file format of the configuration file is a `.json` file.
+>  **Config** $$\rightarrow$$ this is the class that defines all the configurations of the model in hand, such as number of hidden layers in Transformer, number of attention heads in the Transformer encoder, activation function, dropout rate, etc. Usually, there are 2 _default_ configurations [`base`, `large`], but it is possible to tune the configurations to have different models. The file format of the configuration file is a `.json` file.
 
 
-> **Tokenizer** $$\rightarrow$$ the tokenizer class deals with some linguistic details of each model class, as depending on the model a specific tokenization type is used (such as WordPiece for BERT or SentencePiece for XLNet. It also handles begin-of-sentence (bos), end-of-sentence (eod), unknown, separation, padding, mask and any other special token. The tokenizer file can be loaded as a `.txt` file.
+> **Tokenizer** $$\rightarrow$$ the tokenizer class deals with some linguistic details of each model class, as specific tokenization types are used (such as WordPiece for BERT or SentencePiece for XLNet). It also handles begin-of-sentence (bos), end-of-sentence (eod), unknown, separation, padding, mask and any other special tokens. The tokenizer file can be loaded as a `.txt` file.
 
 
-> **Model** $$\rightarrow$$ finally, we need to specify the model class. In this specific case, we are going to use a special classes for Question and Answering [`BertForQuestionAnswering`, `XLNetForQuestionAnswering`], but there are other classes for different downstream tasks that can be used or even coded. These downstream classes inherit more specific classes [`BertModel`, `XLNetModel`], which will then go into more specific details (embedding type, Transformer configuration, etc). The weights of a fine-tuned downstream task model file is a `.bin` file (PyTorch state dictionary file).
-
+> **Model** $$\rightarrow$$ finally, we need to specify the model class. In this specific case, we are going to use special classes for Question and Answering [`BertForQuestionAnswering`, `XLNetForQuestionAnswering`], but there are other classes for different downstream tasks that can be used. These downstream classes inherit [`BertModel`, `XLNetModel`] classes, which will then go into more specific details (embedding type, Transformer configuration, etc). The weights of a fine-tuned downstream task mode are stored in a `.bin` file.
 
 ## Download Fine-tuned models
 
@@ -36,13 +35,13 @@ The `pytorch-transformers` lib has some special classes, and the nice thing is t
 [XLNet Model for SQuAD 1.1](https://drive.google.com/open?id=1e7wu9yI-rGkSzjoPU2TpCC9FMvlKvl8R){: .btn .btn--warning}
 
 
-**Watch out!** The BERT model I downloaded directly from [Hugging Face](https://github.com/huggingface/pytorch-transformers/blob/master/pytorch_transformers/modeling_bert.py) repo, the XLNet model I fine-tuned myself for 3 epochs in a Nvidia 1080ti. Also, I noticed that this model maybe needs some more training - see [Results](#results) section 
+**Watch out!** The BERT model I downloaded directly from [Hugging Face](https://github.com/huggingface/pytorch-transformers/blob/master/pytorch_transformers/modeling_bert.py) repo, the XLNet model I fine-tuned myself for 3 epochs in a Nvidia 1080ti. Also, I noticed that the XLNet model maybe needs some more training - see [Results](#results) section 
 {: .notice--primary}
 
 
 ## Finetuning scripts
-To run the finetuning scripts, the Hugging Face team makes available some dataset-specific files that can be found [here](https://github.com/huggingface/pytorch-transformers/tree/master/examples).
-These finetuning scripts can be highly customizable, for example by passing a config file for a model specified in `.json` file e.g. `--config_name medium_bert.json`.
+To run the fine-tuning scripts, the Hugging Face team makes available some dataset-specific files that can be found [here](https://github.com/huggingface/pytorch-transformers/tree/master/examples).
+These fine-tuning scripts can be highly customizable, for example by passing a config file for a model specified in `.json` file e.g. `--config_name xlnet_m2.jsonn`.
 The examples below are showing BERT finetuning with `base` configuration, and `xlnet` configuration with specific parameters (`n_head`,`n_layer`). The models provided for download both use the `large` config.
 
 ### Finetuning BERT
@@ -89,7 +88,7 @@ python -u run_squad.py \
   --overwrite_cache
 ```
 
-Config `xlnet_medium.json`
+Config `xlnet_m2.json`
 
 ```json
 {
@@ -245,7 +244,7 @@ xlnet = QuestionAnswering(
 ```
 
 ## Results<a name="results"></a>
-I'included some sample `facts` and `questions` to give these algorithms a go:
+I've included some sample `facts` and `questions` to give these algorithms a go:
 ```python
 facts = " My wife is great. \
 My complete name is Roberto Pereira Silveira. \
