@@ -10,7 +10,7 @@ categories: machine_learning nlp pytorch
 
 # Step-by-step guide to finetune and use question and answering models with pytorch-transformers
 
-I have used question and answering system at work and also for some personal POCs, and I'm really impressed how these algorithms evolved recently. My first interaction with QA algorithms was with the BiDAF model (Bidirectional Attention Flow) <sup> [1](#bidaf)</sup> from the great [AllenNLP](https://allennlp.org/) team. It was back in 2017, and ELMo embeddings <sup> [2](#elmo)</sup> were not even used in this BiDAF model (I believe they were using GLove vectors in this first model). Since then, a lot of stuff is happened in the NLP arena, such as the Transformer <sup> [3](#transformer)</sup>, BERT <sup> [4](#bert)</sup> and the many other members of the Sesame Street family (now there are a whole BERT-like-family such as Facebook RoBERTa <sup> [4](#roberta)</sup>, VilBERT and maybe(why not?) one day, DilBERT).
+I have used question and answering systems for some time now, and I'm really impressed how these algorithms evolved recently. My first interaction with QA algorithms was with the BiDAF model (Bidirectional Attention Flow) <sup> [1](#bidaf)</sup> from the great [AllenNLP](https://allennlp.org/) team. It was back in 2017, and ELMo embeddings <sup> [2](#elmo)</sup> were not even used in this BiDAF model (I believe they were using GLove vectors in this first model). Since then, a lot of stuff is happened in the NLP arena, such as the Transformer <sup> [3](#transformer)</sup>, BERT <sup> [4](#bert)</sup> and the many other members of the Sesame Street family (now there are a whole BERT-like-family such as Facebook RoBERTa <sup> [4](#roberta)</sup>, VilBERT and maybe(why not?) one day, DilBERT).
 
 There are lots of great materias out there (see [Probe Further](#more) section for more details), so it will be much easier to go on and watch these awesome video materials instead of detailing each model in a blog post.
 
@@ -256,9 +256,7 @@ My dog name is Mallu. \
 My dog is 5 years old. \
 I am an engineer. \
 I was born in 1979. \
-My salary is 100 USD.\
-My wife e-mail is rsilveira79@gmail.com \
-My dog do not have salary."
+My wife e-mail is rsilveira79@gmail.com."
 
 questions = [
     "What is my complete name?",
