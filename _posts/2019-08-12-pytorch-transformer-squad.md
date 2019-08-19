@@ -256,7 +256,7 @@ My dog name is Mallu. \
 My dog is 5 years old. \
 I am an engineer. \
 I was born in 1979. \
-My wife e-mail is rsilveira79@gmail.com."
+My e-mail is rsilveira79@gmail.com."
 
 questions = [
     "What is my complete name?",
