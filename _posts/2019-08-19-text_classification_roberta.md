@@ -4,7 +4,7 @@ title:  "Text classification with RoBERTa using pytorch-transformers"
 date:   2019-08-19 18:21:41 -0300
 comments: true 
 image:
-  path: /images/bert.jpg
+  path: /images/bert.jpeg
 categories: machine_learning nlp pytorch
 ---
 
