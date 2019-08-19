@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Text classification with RoBERTa using pytorch-transformers"
+title:  "Text classification with RoBERTa"
 date:   2019-08-19 18:21:41 -0300
 comments: true 
 image:
@@ -8,8 +8,7 @@ image:
 categories: machine_learning nlp pytorch
 ---
 
-
-
+# Fine-tuning pytorch-transformers for SequenceClassification
 
 
 
