@@ -44,7 +44,7 @@ As described in earlier [post](https://rsilveira79.github.io/fermenting_gradient
 All the code on this post can be found in this Colab notebook:  
 [Text Classification with RoBERTa](https://colab.research.google.com/drive/1xg4UMQmXjDik3v9w-dAsk4kq7dXX_0Fm){: .btn .btn--success}
 
-First things first, we need to import RoBERTa from `pytorch-transformers`, making sure that we are using latest release **1.1.0**{: .notice}:
+First things first, we need to import RoBERTa from `pytorch-transformers`, making sure that we are using latest release <font color='red'>**1.1.0**</font>:
 
 ```python
 from pytorch_transformers import RobertaModel, RobertaTokenizer
