@@ -1,5 +1,5 @@
 ## ENV VARIABLES
-JEKYLL_ENV=production jekyll build
+JEKYLL_ENV=production bundle exec jekyll build
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
