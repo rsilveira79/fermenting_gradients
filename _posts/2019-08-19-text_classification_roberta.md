@@ -83,7 +83,7 @@ config.num_labels = len(list(label_to_ix.values()))
 }
 ```
 
-In this notebook, I used the nice Colab GPU feature, so all the boilerplate code with `.cuda()` is there. Make sure you have the correct device specified [`cpu`, `cuda`] to run the train the classifier.
+In this notebook, I used the nice Colab GPU feature, so all the boilerplate code with `.cuda()` is there. Make sure you have the correct device specified [`cpu`, `cuda`] when running/training the classifier.
 
 I fine-tuned the classifier for **3** epochs, using `learning_rate`= **1e-05**, with `Adam` optimizer and `nn.CrossEntropyLoss()`. Depending on the dataset you are dealing, these parameters need to be changed. After the **3** epochs, the train accuracy was **~ 98%**, which is fine considering a small dataset (and probably a bit of overfitting as well). 
 
