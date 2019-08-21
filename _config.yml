@@ -1,5 +1,5 @@
 ## ENV VARIABLES
-#JEKYLL_ENV=production
+JEKYLL_ENV=production
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -87,6 +87,8 @@ defaults:
     values:
       layout: post
       share: true
+# Google Analytics
+google_analytics: UA-146144365-1
 
 # Site Author
 author:
@@ -98,6 +100,7 @@ author:
     - title:
       url:
       icon:
+     
 
 # Footer Links
 footer_links:
