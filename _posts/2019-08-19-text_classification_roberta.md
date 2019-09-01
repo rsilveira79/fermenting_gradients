@@ -8,7 +8,7 @@ image:
 categories: machine_learning nlp pytorch
 ---
 
-# Fine-tuning pytorch-transformers for SequenceClassification
+# Fine-tuning pytorch-transformers for SequenceClassificatio
 
 As mentioned already in earlier [post](https://rsilveira79.github.io/fermenting_gradients/machine_learning/nlp/pytorch/pytorch-transformer-squad/), I'm a big fan of the work that the [Hugging Face](http://huggingface.co) is doing to make available latest models to the community.
 Very recently, they made available Facebook RoBERTa: _A Robustly Optimized BERT Pretraining Approach_<sup> [1](#roberta)</sup>. Facebook team proposed several improvements on top of BERT  <sup> [2](#bert)</sup>, with the main assumption tha BERT model was _"significantly undertrained"_. The modification over BERT include:
@@ -103,7 +103,7 @@ get_reply("Book a table for me tonight")
 'BookRestaurant'
 ```
 
-RoBERTo hopes you have enjoyed RoBERTa :smiley: and you can use it in your projects! 
+RoBERTo hopes you have enjoyed RoBERTa 😁and you can use it in your projects! 
 
 ## References
 
