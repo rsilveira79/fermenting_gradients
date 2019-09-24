@@ -21,9 +21,9 @@ $$
 
 $$K_{A}\equiv[K_{i,j}]_{i,j\in A}$$ in equation above represents the marginal kernel to compute probabilities of points $$i,j$$ of any subset $$\mathcal{A}$$ to be included in **Y**. By using determinal rule, we can represent $$\mathcal{P}$$ as:
 
-$$\mathcal{P}(i \in Y) = K_{ii}$$  
-$$\mathcal{P}(i,j \in Y) = K_{ii}K_{jj}-K_{ij}K_{ji}$$ 
-$$\mathcal{P}(i,j \in Y) = \mathcal{P}(i \in Y) \mathcal{P}(j \in Y)-K_{ij}^2$$  
+$$\mathcal{P}(i \in Y) = K_{ii} \\ 
+\mathcal{P}(i,j \in Y) = K_{ii}K_{jj}-K_{ij}K_{ji} \\ 
+\mathcal{P}(i,j \in Y) = \mathcal{P}(i \in Y) \mathcal{P}(j \in Y)-K_{ij}^2$$  
 
 The last term in equation above ($$K_{ij}^2$$) determines the (anti) correlations bewtweens pairs of elements, meaning the large values of $$K_{ij}$$ (high correlation in points) will tend **not** do co-occur. This is the part in the DPP formulation that ensures that it will sample for diversity.
 
