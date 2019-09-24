@@ -4,7 +4,7 @@ title:  "Sampling diverse NeurIPS papers using Determinantal Point Process (DPP)
 date:   2019-09-23 22:06:00 -0300
 comments: true 
 image:
-  path: /images/bert.jpeg
+  path: /images/transformer.jpg
 categories: machine_learning nlp pytorch dpp probabilistic
 ---
 
