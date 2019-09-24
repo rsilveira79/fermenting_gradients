@@ -86,22 +86,13 @@ def get_bert_embedding(sent):
 Now to the final and most exciting part, on how to select diverse papers. In order to compare diverse papers sampled with DPP, I selected the closest (nearest) papers by applying cosine similarity of a given random paper with the whole set of 1009 papers from 2018 NeurIPS conference. In order to plot those papers in 2D, I used TSNE from Scikit-Learn <sup>[7](#sklearn)</sup> (with perplexity = **5**).
 
 The distribution of the closest (nearest) papers given a random selected paper is shown in the figure below. As we can see, most of the papers cluster together in the top right corner of the picture, confirming that they are similar when projecting the embeddings into 2D plane:
-
-```yaml
-image: /images/nearest_visualization.png
-```
+![Nearest Papers](https://github.com/rsilveira79/fermenting_gradients/tree/master/images/nearest_visualization.png)
 
 As for the random sampled papers, we can see on the figure below that they seem to be cluttered in some parts of the plane (bottom right) and not equally distributed:
-
-```yaml
-image: /images/random_visualization.png
-```
+![Random Papers](https://github.com/rsilveira79/fermenting_gradients/tree/master/images/random_visualization.png)
 
 Finally, the figure below show papers sampled using **k-DPP** from DPPy library, with *k* size of **10** and likelihood kernel. As we can see, the distribution seem to be more diverse and more distributed in space than the previous methods (nearest, random):
-
-```yaml
-image: /images/diverse_visualization.png
-```
+![Diverse Papers](https://github.com/rsilveira79/fermenting_gradients/tree/master/images/diverse_visualization.png)
 
 Finally, in order to compare these three sets in a more quantitative way, I measured average Jaccard similarity, cosine similarity and euclidean distance of `nearest` , `random` and `diverse` sets. It is interesting to note that, as the `diverse` set is more equally distributed in space, it's Jaccard and Cosine similarity are lower, and the average Euclidean distance of the set is higher than the `nearest` and the `random` sets.
 
