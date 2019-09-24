@@ -94,6 +94,13 @@ As for the random sampled papers, we can see on the figure below that they seem 
 Finally, the figure below show papers sampled using **k-DPP** from DPPy library, with *k* size of **10** and likelihood kernel. As we can see, the distribution seem to be more diverse and more distributed in space than the previous methods (nearest, random):
 ![Diverse Papers](/images/diverse_visualization.png)
 
+```html
+<figure class="half">
+	<img src="/images/diverse_visualization.png" alt="image">
+	<figcaption>Caption describing these two images.</figcaption>
+</figure>
+```
+
 Finally, in order to compare these three sets in a more quantitative way, I measured average Jaccard similarity, cosine similarity and euclidean distance of `nearest` , `random` and `diverse` sets. It is interesting to note that, as the `diverse` set is more equally distributed in space, it's Jaccard and Cosine similarity are lower, and the average Euclidean distance of the set is higher than the `nearest` and the `random` sets.
 
 ```python
