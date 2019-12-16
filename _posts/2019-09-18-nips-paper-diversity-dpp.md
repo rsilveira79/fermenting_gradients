@@ -21,9 +21,9 @@ $$
 
 $$K_{A}\equiv[K_{i,j}]_{i,j\in A}$$ in equation above represents the marginal kernel to compute probabilities of points $$i,j$$ of any subset $$\mathcal{A}$$ to be included in **Y**. By using determinal rule, we can represent $$\mathcal{P}$$ as:
 
-$$\mathcal{P}(i \in Y) = K_{ii}$$  
-$$\mathcal{P}(i,j \in Y) = K_{ii}K_{jj}-K_{ij}K_{ji}$$ 
-$$\mathcal{P}(i,j \in Y) = \mathcal{P}(i \in Y) \mathcal{P}(j \in Y)-K_{ij}^2$$  
+$$\mathcal{P}(i \in Y) = K_{ii} \\ 
+\mathcal{P}(i,j \in Y) = K_{ii}K_{jj}-K_{ij}K_{ji} \\ 
+\mathcal{P}(i,j \in Y) = \mathcal{P}(i \in Y) \mathcal{P}(j \in Y)-K_{ij}^2$$  
 
 The last term in equation above ($$K_{ij}^2$$) determines the (anti) correlations bewtweens pairs of elements, meaning the large values of $$K_{ij}$$ (high correlation in points) will tend **not** do co-occur. This is the part in the DPP formulation that ensures that it will sample for diversity.
 
@@ -86,13 +86,16 @@ def get_bert_embedding(sent):
 Now to the final and most exciting part, on how to select diverse papers. In order to compare diverse papers sampled with DPP, I selected the closest (nearest) papers by applying cosine similarity of a given random paper with the whole set of 1009 papers from 2018 NeurIPS conference. In order to plot those papers in 2D, I used TSNE from Scikit-Learn <sup>[7](#sklearn)</sup> (with perplexity = **5**).
 
 The distribution of the closest (nearest) papers given a random selected paper is shown in the figure below. As we can see, most of the papers cluster together in the top right corner of the picture, confirming that they are similar when projecting the embeddings into 2D plane:
-![Nearest Papers](/assets/images/nearest_visualization.png)
+
+<img src="{{site.baseurl}}/assets/images/nearest_visualization.png">
 
 As for the random sampled papers, we can see on the figure below that they seem to be cluttered in some parts of the plane (bottom right) and not equally distributed:
-![Random Papers](/assets/images/random_visualization.png)
+
+<img src="{{site.baseurl}}/assets/images/random_visualization.png">
 
 Finally, the figure below show papers sampled using **k-DPP** from DPPy library, with *k* size of **10** and likelihood kernel. As we can see, the distribution seem to be more diverse and more distributed in space than the previous methods (nearest, random):
-![Diverse Papers](/assets/images/diverse_visualization.png)
+
+<img src="{{site.baseurl}}/assets/images/diverse_visualization.png">
 
 Finally, in order to compare these three sets in a more quantitative way, I measured average Jaccard similarity, cosine similarity and euclidean distance of `nearest` , `random` and `diverse` sets. It is interesting to note that, as the `diverse` set is more equally distributed in space, it's Jaccard and Cosine similarity are lower, and the average Euclidean distance of the set is higher than the `nearest` and the `random` sets.
 
