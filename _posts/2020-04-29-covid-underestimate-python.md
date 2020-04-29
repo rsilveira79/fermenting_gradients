@@ -8,7 +8,7 @@ image:
 categories: stats under-reporting covid
 ---
 
-# COVID-19 - Under-Reporting estimation in Python
+# Using python (Pandas + Numpy + Scipy)
 
 In this pandemic time, data-scientist and machine learning engineers are stepping in and building models to help policymakers take decisions under very uncertain moments. A great example is a friend of mine, Christian Perone, who is spending lots of energy to elucidate what is happening using Bayesian inference as the main tool. Check out his dedicated website including several different analysis: [Christian Perone - COVID-19 Analysis Repository](https://perone.github.io/covid19analysis/)
 
@@ -62,7 +62,7 @@ The code can be found in this Jupyter Notebook here:
 
 [COVID 19 - Under-reporting estimation](https://github.com/rsilveira79/CFR_calculation_python/blob/master/notebooks/1.initial_assessment.ipynb){: .btn .btn--success}
 
-Also, I configured a Github Action to execute this code every 12 hours and output the **.CSV** file as result in **output** folder of this repo.
+Also, I configured a Github Action to execute this code every 12 hours and output the **.CSV** file as result in **output** folder of this [repo](https://github.com/rsilveira79/CFR_calculation_python).
 
 ## References
 
