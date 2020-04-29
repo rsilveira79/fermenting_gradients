@@ -62,11 +62,10 @@ The code can be found in this Jupyter Notebook here:
 
 [COVID 19 - Under-reporting estimation](https://github.com/rsilveira79/CFR_calculation_python/blob/master/notebooks/1.initial_assessment.ipynb){: .btn .btn--success}
 
-Also, I configured a Github Action to execute this code every 12 hours and output the *.CSV* file as result in *output* folder of this repo.
+Also, I configured a Github Action to execute this code every 12 hours and output the **.CSV** file as result in **output** folder of this repo.
 
 ## References
 
 1. **Using a delay-adjusted case fatality ratio to estimate under-reporting** <a name="under_report">[Link](https://cmmid.github.io/topics/covid19/global_cfr_estimates.html)</a><br>Timothy W Russell*, Joel Hellewell1, Sam Abbott1, Nick Golding, Hamish Gibbs, Christopher I Jarvis, Kevin van Zandvoort, CMMID nCov working group, Stefan Flasche, Rosalind Eggo, W John Edmunds & Adam J Kucharski, 2020
-2. 
 
 
